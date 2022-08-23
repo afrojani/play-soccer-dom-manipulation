@@ -91,13 +91,14 @@
                     <h3 class="text-2xl font-medium">Budget</h3>
                     <div class="grid grid-cols-2 gap-4">
                         <span>Per Player</span> <input class="w-24 h-8 bg-black border-solid border-2 border-white"
-                            type="text" name="" id="">
+                            type="text" name="" id="player-cost">
                     </div>
-                    <button class="block bg-cyan-600 rounded-none m-4 py-2 px-20 text-white font-medium ">Calculate
+                    <button id="btn-calculate"
+                        class="block bg-cyan-600 rounded-none m-4 py-2 px-20 text-white font-medium ">Calculate
                     </button>
                     <div class="grid grid-cols-2 gap-4">
                         <p>Player Expenses</p>
-                        <p>$5000</p>
+                        <p>$<span id="totalplayer-cost">0</span></p>
                         <span>Manager</span> <input class="w-24 h-8 bg-black border-solid border-2 border-white"
                             type="text" name="" id="">
                         <span>Coach</span> <input class="w-24 h-8 bg-black border-solid border-2 border-white"
@@ -113,6 +114,11 @@
             </div>
         </section>
     </main>
+    <script src="js/playerExpense.js"></script>
 </body>
+<footer>
+    <hr class="my-6 ">
+    <p class="text-center p-4">Copyright @ 2022 All Rights Reserved.</p>
+</footer>
 
 </html>
