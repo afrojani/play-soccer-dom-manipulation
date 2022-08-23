@@ -5,7 +5,7 @@ function getInputFieldValueById(inputFieldId) {
     // inputField.value = '';
     return inputFieldValue;
 }
-function getTextElementStringById(elementId) {
+function getTextElementValueById(elementId) {
     const element = document.getElementById(elementId);
     const elementValueString = element.innerText;
     const value = parseFloat(elementValueString);
@@ -26,9 +26,9 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 })
 
 document.getElementById('total-calculation').addEventListener('click', function () {
-    const totalPlayerExpenses = getTextElementStringById('totalplayer-cost');
+    const totalPlayerExpenses = getTextElementValueById('totalplayer-cost');
     const managerCost = getInputFieldValueById('manager-cost');
     const coachCost = getInputFieldValueById('coach-cost');
-    const overallCost = parseFloat(totalPlayerExpenses) + managerCost + coachCost;
+    const overallCost = totalPlayerExpenses + managerCost + coachCost;
     setTextElementValueBYId('overall-total', overallCost);
 })
