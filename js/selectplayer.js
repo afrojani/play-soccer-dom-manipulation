@@ -1,7 +1,6 @@
 function getTextElementStringById(elementId) {
     const element = document.getElementById(elementId);
     const elementValueString = element.innerText;
-    // const value = parseFloat(elementValueString);
     return elementValueString;
 }
 
@@ -10,35 +9,23 @@ function disabledButton(idName) {
     document.getElementById(idName).style.backgroundColor = 'gray';
 }
 
+var count = 0
 function listItem(playerName) {
+    count += 1;
     const playerOL = document.querySelector('#list-players');
     const newLi = document.createElement('li');
-    newLi.innerText = playerName;
+    newLi.innerText = count + ". " + playerName;
     playerOL.appendChild(newLi);
 }
 
+var number_player = 0;
 function playerSelection(btnId, txtId) {
-    document.getElementById(btnId).addEventListener('click', function () {
+    if (number_player < 5) {
         const Player = getTextElementStringById(txtId);
         disabledButton(btnId);
         listItem(Player);
-    })
+        number_player += 1;
+    } else {
+        alert('Already selected 5 players')
+    }
 }
-
-
-playerSelection('messi', 'text-messi');
-playerSelection('neymar', 'text-neymar');
-playerSelection('mbappe', 'text-mbappe');
-playerSelection('vitor', 'text-vitor');
-playerSelection('ramos', 'text-ramos');
-playerSelection('sanches', 'text-sanches');
-// function setTextElementStringBYId(elementId, newText) {
-//     const textElement = document.getElementById(elementId);
-//     textElement.innerText = newText;
-// }
-
-// document.getElementById('messi').addEventListener('click', function () {
-//     const fisrtPlayer = getTextElementStringById('text-messi');
-//     disabledButton('messi');
-//     listItem(fisrtPlayer);
-// })

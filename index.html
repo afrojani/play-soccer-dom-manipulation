@@ -36,42 +36,48 @@
                 <div class="flex flex-col">
                     <img src="images/messi.png" alt="">
                     <h3 id="text-messi" class="text-2xl font-medium my-4 mx-4">Lionel Messi</h3>
-                    <button id="messi" class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
+                    <button id="messi" name="messi" onclick="playerSelection(this.name,`text-${this.name}`)"
+                        class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
                 </div>
             </div>
             <div class="border-solid border-2 rounded border-black">
                 <div class="flex flex-col">
                     <img src="images/neimar.png" alt="">
                     <h3 id="text-neymar" class="text-2xl font-medium my-4 mx-4">Neymar Jr </h3>
-                    <button id="neymar" class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
+                    <button id="neymar" name="neymar" onclick="playerSelection(this.name,`text-${this.name}`)"
+                        class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
                 </div>
             </div>
             <div class="border-solid border-2 rounded border-black">
                 <div class="flex flex-col">
                     <img src="images/embappe.png" alt="">
                     <h3 id="text-mbappe" class="text-2xl font-medium my-4 mx-4">Kylian Mbappé</h3>
-                    <button id="mbappe" class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
+                    <button id="mbappe" name="mbappe" onclick="playerSelection(this.name,`text-${this.name}`)"
+                        class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
                 </div>
             </div>
             <div class="border-solid border-2 rounded border-black">
                 <div class="flex flex-col">
                     <img src="images/vitor machado.png" alt="">
                     <h3 id="text-vitor" class="text-2xl font-medium my-4 mx-4">Vítor Machado</h3>
-                    <button id="vitor" class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
+                    <button id="vitor" name="vitor" onclick="playerSelection(this.name,`text-${this.name}`)"
+                        class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
                 </div>
             </div>
             <div class="border-solid border-2 rounded border-black">
                 <div class="flex flex-col">
                     <img src="images/ramos.png" alt="">
                     <h3 id="text-ramos" class="text-2xl font-medium my-4 mx-4">Sergio Ramos</h3>
-                    <button id="ramos" class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
+                    <button id="ramos" name="ramos" onclick="playerSelection(this.name,`text-${this.name}`)"
+                        class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
                 </div>
             </div>
             <div class="border-solid border-2 rounded border-black">
                 <div class="flex flex-col">
                     <img src="images/ranato sanches.png" alt="">
                     <h3 id="text-sanches" class="text-2xl font-medium my-4 mx-4">Renato Sanches</h3>
-                    <button id="sanches" class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
+                    <button id="sanches" name="sanches" onclick="playerSelection(this.name,`text-${this.name}`)"
+                        class="bg-cyan-600 rounded-none m-4 p-2 text-white font-medium">Select</button>
                 </div>
             </div>
         </section>
@@ -80,11 +86,6 @@
                 <div class="bg-black text-white p-4 h-72">
                     <h3 class="text-2xl font-medium mb-5">Add five Players</h3>
                     <ol id="list-players" class="font-medium p-2">
-                        <!-- <li>1. Select A Player</li>
-                        <li>2. Select A Player</li>
-                        <li>3. Select A Player</li>
-                        <li>4. Select A Player</li>
-                        <li>5. Select A Player</li> -->
                     </ol>
                 </div>
                 <div class="bg-black text-white p-4">

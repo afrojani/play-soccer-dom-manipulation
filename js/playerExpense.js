@@ -18,8 +18,10 @@ function setTextElementValueBYId(elementId, newValue) {
 }
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
+    const element = document.getElementById('list-players');
+    let numb = element.childNodes.length;
     const perPlayerCost = getInputFieldValueById('player-cost');
-    const totalPlayerCost = perPlayerCost * 5;
+    const totalPlayerCost = perPlayerCost * (numb - 1);
     setTextElementValueBYId('totalplayer-cost', totalPlayerCost);
 })
 
@@ -27,6 +29,6 @@ document.getElementById('total-calculation').addEventListener('click', function 
     const totalPlayerExpenses = getTextElementStringById('totalplayer-cost');
     const managerCost = getInputFieldValueById('manager-cost');
     const coachCost = getInputFieldValueById('coach-cost');
-    const overallCost = totalPlayerExpenses + managerCost + coachCost;
+    const overallCost = parseFloat(totalPlayerExpenses) + managerCost + coachCost;
     setTextElementValueBYId('overall-total', overallCost);
 })
